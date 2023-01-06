@@ -5,7 +5,8 @@
 This is a ticketing website that users can reserve thier tickets by entering thier name, email, and phone number. The website contains timer until
 ticketing day ends (May 23, 2023). After the users enter their email, the users will receive payment details after the ticketing deadline. This website
 is mainly for advertisement as it contains posters (images of singers and their songs) on the main page. 
-(React as Frontend, Mongo DB as Backend) 
+
+Language used: React as Frontend, Nodejs as Backend, Mongo DB as Database  
 
 > Stpes to install and run this application: 
 
