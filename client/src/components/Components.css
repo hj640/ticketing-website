@@ -1,0 +1,446 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Racing+Sans+One&display=swap');
+/* Landing Page */
+
+*{
+    font-family: 'Racing Sans One', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 4px rgba(94, 142, 255);
+}
+
+.header {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 60px;
+}
+.header h1 {
+    display: inline-block;;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.header button {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    padding: 7px;
+    border: 1.5px solid rgba(94, 142, 255, 0.6);
+    box-shadow: 2px 2px 10px rgba(94, 142, 255, 0.6);
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.header button:hover {
+    box-shadow: 2px 2px 10px rgba(94, 142, 255);
+    background-color: white;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.singers {
+    margin-top: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.singers li {
+    position: relative;
+    border-right: 5px solid #000;
+    flex: 1;
+    overflow: hidden;
+}
+
+.singers li:last-child {
+    border-right: none;
+}
+
+.singers li:nth-child(1) {
+    background: url(images/Salena-Gomez.jpeg) no-repeat center center;
+    background-size: cover;
+}
+
+.singers li:nth-child(2) {
+    background: url(images/IU.jpeg) no-repeat center center;
+    background-size: cover;
+}
+
+.singers li:nth-child(3) {
+    background: url(images/Billie-Eillish.jpeg) no-repeat center center;
+    background-size: cover;
+}
+
+.singers li:nth-child(4) {
+    background: url(images/Ariana-Grande.jpeg) no-repeat center center;
+    background-size: cover;
+}
+
+.singers li:nth-child(5) {
+    background: url(images/Jennie.jpeg)no-repeat center center;
+    background-size: cover;
+}
+
+.singers:hover li {
+    flex: 1;
+}
+
+.singers li:hover {
+    flex: 2;
+    filter: grayscale(1);
+}
+
+.content {
+    position: absolute;
+    background-color: black;
+    color: white;
+    height: 250px;
+    width: 100%;
+    bottom: -350px;
+    transition: 0.5s;
+    padding: 5px;
+    box-sizing: border-box;
+    padding-top: 50px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.content h2 {
+    position: absolute;
+    top: 0;
+    font-size: 30px;
+    left: 5%;
+    display: block;
+}
+
+.content p {
+    position: absolute;
+    font-size: 25px;
+    top: 25%;
+    left: 20%;
+    display: block;
+}
+
+.sns {
+    position: absolute;
+    bottom: 15%;
+    left: 60%;
+    display: inline-block;
+}
+
+.sns a {
+    display: inline-block;
+    color: #333;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+
+.singers li:hover .content {
+    bottom: 0;
+    transition-delay: 0.3s;
+}
+
+.content:before {
+    content:'';
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 30%;
+    left: 0;
+    top: -10px;
+    transform-origin: left bottom;
+    transform: rotate(-5deg) scale(1.3);
+    z-index: -1;
+}
+
+
+/* Reserve Page */
+
+.container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+/* .wrapper {
+    border: 1px solid green;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+} */
+#d-day-message {
+    position: absolute;
+    left: 50%;
+    top: 8%;
+    transform: translateX(-50%);
+    height: 30px;
+    width: 600px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 35px;
+    margin-bottom: 10px;
+    /* border: 1px solid red; */
+}
+
+#d-day-counter {
+    /* border: 1px solid blue; */
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translateX(-50%);
+    height: 120px;
+    width: 1000px;
+    text-align: center;
+}
+
+.d-day-container {
+    display: inline-block;
+    width: 150px;
+    height: 100%;
+    margin: 0 20px;
+    /* border: 1px solid green; */
+}
+
+.d-day-child-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid blue; */
+    position: relative;
+}
+
+.d-day-child-container #days,
+.d-day-child-container #hours,
+.d-day-child-container #min,
+.d-day-child-container #sec {
+    display: inline-block;
+}
+
+.d-day-child-container span {
+    font-size: 70px;
+    text-shadow: 3px 3px 2px rgba(94, 142, 255);
+}
+
+
+.d-day-child-container span:after {
+    position: absolute;
+    font-size: 20px;
+    content: attr(id);
+    height: 20px;
+    width: 50%;
+    text-align: center;
+    font-weight: 600;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.description {
+    font-size: 14px;
+    margin-top: 60px;
+    height: 150px;
+    width: 1000px;
+    overflow-wrap: break-word;
+    /* border: 1px solid blue; */
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.reserve {
+    /* border: 1px solid green; */
+    position: absolute;
+    display: block;
+    height: 200px;
+    width: 1000px;
+    left: 50%;
+    top: 62%;
+    transform: translateX(-50%);
+    text-align: center;
+    height: 120px;
+}
+
+.reserve h3 {
+    font-size: 15px;
+    margin-top: 25px;
+    /* border: 1px solid green; */
+}
+
+.reserve button {
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    width: 80px;
+    height: 30px;
+    border: 1.5px solid rgba(94, 142, 255, 0.6);
+    box-shadow: 2px 2px 10px rgba(94, 142, 255, 0.6);
+    cursor: pointer;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.reserve button:hover {
+    box-shadow: 4px 4px 10px rgba(94, 142, 255);
+    background-color: white;
+    color: black;
+}
+
+.info {
+    /* border: 1px solid blue; */
+    margin-top: 12px;
+    position: relative;
+    height: 170px;
+}
+
+.item {
+    position: relative;
+    /* border: 1px solid red; */
+    margin-bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40px;
+    width: 280px;
+}
+
+.item input {
+    border: 1px solid lightgray;
+    height: 40px;
+    width: inherit;
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 50px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.item .fa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    background-color: gray;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px 0 0 5px;
+    transition: 0.3s;
+}
+
+.item input::placeholder {
+    position: absolute;
+    left: 18%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+
+}
+
+.item input:focus {
+    border: 1px solid dodgerblue;
+    box-shadow: 0 0 5px dodgerblue;
+}
+
+.item input:focus + .fa {
+    background-color: dodgerblue;
+  }
+
+.item input:focus::placeholder {
+    visibility: hidden;
+}
+
+/* Reserve Success Page */
+.reserveSuccessPage {
+    background-color: black;
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.reserveSuccessPage span {
+    margin-top: 100px;
+    display: block;
+    width: 100%;
+    height: 100px;
+    font-size: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.reserveSuccessPage h1 {
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 60px;
+    text-shadow: 3px 3px 2px rgba(94, 142, 255);
+}
+
+.reserveSuccessPage h2 {
+    height: 50px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.reserveSuccessPage h3 {
+    height: 130px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.mainPage-btn {
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+.reserveSuccessPage button {
+    background-color: black;
+    color: white;
+    width: 150px;
+    height: 30px;
+    font-size: 20px;
+    border: 1.5px solid rgba(94, 142, 255, 0.6);
+    box-shadow: 2px 2px 10px rgba(94, 142, 255, 0.6);
+    cursor: pointer;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.reserveSuccessPage button:hover {
+    box-shadow: 4px 4px 10px rgba(94, 142, 255);
+    background-color: white;
+    color: black;
+}

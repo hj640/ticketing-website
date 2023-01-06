@@ -1,0 +1,1 @@
+export const RESERVE_USER = "reserve_user";
